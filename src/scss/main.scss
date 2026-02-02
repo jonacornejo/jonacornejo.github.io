@@ -1,30 +1,109 @@
 @import '_variables.scss';
 @import '_typography.scss';
+@import '_components.scss';
+
 
 body {
-	background: $cream;
-	margin: 0;
-	padding: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
 
-	.content {
-		text-align: center;
-		margin: 0 30px;
+	nav {
 
-		div.avatar {
-			margin-bottom: 30px;
-
-			img {
-				height: 250px;
-				width: auto;
-			}
+		.logo {
+			width: 70px;
+			margin: 20px 0;
 		}
 
-		div.button {
-			margin-top: 40px;
+		.uk-navbar-nav {
+			gap: 20px;
+
+			@media (min-width: $small) {
+				gap: 50px;
+			}
+
+			li > a {
+				text-transform: none;
+				color: #333;
+				font-size: 16px;
+			}
+		}
+	}
+
+	#intro {
+		background-color: $peach;
+		border-radius: 15px;
+		width: 100%;
+		max-width: 800px;
+		height: 200px;
+		position: relative;
+
+		.icon {
+			position: absolute;
+			width: 70px;
+			height: auto;
+
+			&.icon-1 {
+				bottom: -30px;
+				left: 10px;
+			}
+
+			&.icon-2 {
+				bottom: -40px;
+				left: 90px;
+			}
+
+			&.icon-3 {
+				top: -40px;
+				right: 10px;
+			}
+			
+			&.icon-4 {
+				top: -35px;
+				right: 85px;
+			}
+
+			@media (min-width: $medium) {
+				width: 130px;
+
+				&.icon-1 {
+					top: -20px;
+					left: -55px;
+				}
+
+				&.icon-2 {
+					bottom: -45px;
+					left: 15px;
+				}
+
+				&.icon-3 {
+					top: -35px;
+					right: -55px;
+				}
+
+				&.icon-4 {
+					right: 10px;
+					bottom: -40px;
+					top: auto;
+				}
+			}
+		}
+	}
+
+	#about {
+		.title {
+			position: relative;
+			display: inline-block;
+
+			&::before {
+				content: "";
+				width: 70px;
+				height: 70px;
+				display: block;
+				background-image: url(../assets/icon-star.png);
+				position: absolute;
+				background-size: contain;
+				z-index: -1;
+				left: -30px;
+				top: -10px;
+			}
 		}
 	}
 }

@@ -5,6 +5,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Hi, I'm Jona!</title>
 	<link rel="icon" type="image/x-icon" href="./assets/favicon.png">
+
+	<!-- UIkit CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.25.7/dist/css/uikit.min.css" />
+
+	<!-- UIkit JS -->
+	<script src="https://cdn.jsdelivr.net/npm/uikit@3.25.7/dist/js/uikit.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/uikit@3.25.7/dist/js/uikit-icons.min.js"></script>
+
 	<link rel="stylesheet" type="text/css" href="./dist/style.min.css">
 	
 	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -12,7 +20,56 @@
 </head>
 <body>
 
-	<div class="content">
+	<div uk-sticky>
+		<nav class="uk-navbar-container uk-navbar-transparent uk-width-1-1">
+			<div class="uk-container">
+				<div uk-navbar>
+					<div class="uk-navbar-left">
+						<a href="">
+							<img class="logo" src="./assets/blob-avatar.png" alt="jona-avatar">
+						</a>
+					</div>
+					<div class="uk-navbar-right">
+						<ul class="uk-navbar-nav">
+							<li><a href="#about">About</a></li>
+							<li><a href="#projects">Projects</a></li>
+							<li><a href="#services">Services</a></li>
+							<li><a href="#contact">Get in touch</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</div>
+
+	<div class="uk-container">
+
+		<div id="intro" class="uk-margin-auto uk-margin-large-top uk-flex uk-flex-center uk-flex-middle">
+			<div class="uk-text-center">
+				<h1>Hi! 👋 My name is Jona
+				<br>and I make websites.</h1>
+				<img class="icon icon-1" src="./assets/icon-coding.png" alt="icon-coding">
+				<img class="icon icon-2" src="./assets/icon-alert.png" alt="icon-alert">
+				<img class="icon icon-3" src="./assets/icon-mobile-phone.png" alt="icon-mobile-phone">
+				<img class="icon icon-4" src="./assets/icon-coding-1.png" alt="icon-coding-1">
+			</div>
+		</div>
+
+		<div id="about" class="uk-margin-xlarge-top uk-margin-xlarge-bottom uk-width-2xlarge uk-margin-auto">
+			<div class="uk-text-center">
+				<h2 class="title">About</h2>
+				<p>I'm a web developer specializing in front-end and WordPress.</p>
+				<p>Working at digital agencies and juggling freelance gigs for over a decade
+					has equipped me for building all sorts of web-based applications.</p>
+				<div class="uk-margin-medium-top">
+					<a class="button" href="#projects">View projects</a>
+				</div>
+			</div>
+		</div>
+			
+	</div>
+
+	<!-- <div class="content">
 		<div class="avatar">
 			<img src="./assets/blob-avatar.png" alt="jona-avatar">
 		</div>
@@ -21,7 +78,7 @@
 		<div class="button">
 			<a class="cta" href="mailto:sudosuika@gmail.com">Let's work on yours 💌</a>
 		</div>
-	</div>
+	</div> -->
 
 </body>
 </html>
