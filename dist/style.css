@@ -131,3 +131,45 @@ body #about .title::before {
   left: -30px;
   top: -10px;
 }
+body #services {
+  padding: 50px;
+  background-color: #F5D6CC;
+  width: 100%;
+  border-radius: 15px;
+}
+body #services .service-item {
+  text-align: center;
+  width: 150px;
+}
+body #services img {
+  width: 100px;
+  text-align: center;
+}
+@media (min-width: 960px) {
+  body #services img {
+    width: 100%;
+  }
+}
+body #projects .project-item {
+  padding: 10px;
+  border-radius: 15px;
+  color: #ebebeb;
+}
+body #projects .project-item-1 {
+  background-color: #589FC7;
+}
+body #projects .project-item-2 {
+  background-color: #5AA799;
+}
+body #projects .project-item-3 {
+  background-color: #DB6D8B;
+}
+body #projects .project-item-4 {
+  background-color: #D37E3A;
+}
+body #projects .project-item-5 {
+  background-color: #E8C01B;
+}
+body #projects .project-item-6 {
+  background-color: #946389;
+}

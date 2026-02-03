@@ -106,4 +106,58 @@ body {
 			}
 		}
 	}
+
+	#services {
+		padding: 50px;
+		background-color: #F5D6CC;
+		width: 100%;
+		border-radius: 15px;
+
+		.service-item {
+			text-align: center;
+			width: 150px;
+		}
+		
+		img {
+			width: 100px;
+			text-align: center;
+	
+			@media (min-width: $medium) {
+				width: 100%;
+			}
+		}
+	}
+
+	#projects {
+
+		.project-item {
+			padding: 10px;
+			border-radius: 15px;
+			color: $white;
+
+			&-1 {
+				background-color: #589FC7;
+			}
+
+			&-2 {
+				background-color: #5AA799;
+			}
+
+			&-3 {
+				background-color: #DB6D8B;
+			}
+
+			&-4 {
+				background-color: #D37E3A;
+			}
+
+			&-5 {
+				background-color: #E8C01B;
+			}
+
+			&-6 {
+				background-color: #946389;
+			}
+		}
+	}
 }
