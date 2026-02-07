@@ -40,6 +40,8 @@ a.cta {
   border-radius: 15px;
   padding: 15px 40px;
   color: #333;
+  font-weight: 500;
+  font-size: 18px;
 }
 .button:hover {
   border: 2px solid #ddab02;
@@ -47,19 +49,28 @@ a.cta {
   color: #333;
 }
 
-body nav .logo {
-  width: 70px;
-  margin: 20px 0;
+body {
+  cursor: url("../assets/watermelon.svg") 12 12, auto;
 }
-body nav .uk-navbar-nav {
+body .uk-navbar-container:not(.uk-navbar-transparent) {
+  background: #F5D6CC;
+}
+body .uk-navbar {
+  margin: 0 20px;
+}
+body .uk-navbar .logo {
+  width: 70px;
+  margin: 15px 0;
+}
+body .uk-navbar .uk-navbar-nav {
   gap: 20px;
 }
 @media (min-width: 640px) {
-  body nav .uk-navbar-nav {
+  body .uk-navbar .uk-navbar-nav {
     gap: 50px;
   }
 }
-body nav .uk-navbar-nav li > a {
+body .uk-navbar .uk-navbar-nav li > a {
   text-transform: none;
   color: #333;
   font-size: 16px;
@@ -133,22 +144,48 @@ body #about .title::before {
 }
 body #services {
   padding: 50px;
-  background-color: #F5D6CC;
+  background-color: #fdf5f2;
   width: 100%;
   border-radius: 15px;
 }
 body #services .service-item {
-  text-align: center;
-  width: 150px;
-}
-body #services img {
-  width: 100px;
-  text-align: center;
+  margin-bottom: 20px;
 }
 @media (min-width: 960px) {
-  body #services img {
-    width: 100%;
+  body #services .service-item {
+    text-align: center;
+    width: 150px;
   }
+}
+body #services .service-item img {
+  width: 100px;
+  text-align: center;
+  margin-right: 20px;
+}
+@media (min-width: 960px) {
+  body #services .service-item img {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+body #services ul li {
+  list-style: none;
+  position: relative;
+}
+body #services ul li::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  display: block;
+  background-image: url(../assets/icon-sparkle.png);
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  left: -40px;
+  top: 2px;
+}
+body #projects {
+  display: none;
 }
 body #projects .project-item {
   padding: 10px;
@@ -172,4 +209,96 @@ body #projects .project-item-5 {
 }
 body #projects .project-item-6 {
   background-color: #946389;
+}
+body #tech .title {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+body #tech .title::before {
+  content: "";
+  width: 70px;
+  height: 70px;
+  display: block;
+  background-image: url(../assets/icon-mouse-clicker.png);
+  position: absolute;
+  background-size: contain;
+  z-index: -1;
+  left: -33px;
+  top: -17px;
+}
+body #tech .tech-item {
+  border-radius: 15px;
+  text-align: center;
+  max-width: 280px;
+}
+body #tech .tech-item-1 {
+  background-color: #6D9BB5;
+}
+body #tech .tech-item-2 {
+  background-color: #EBA268;
+}
+body #tech .tech-item-3 {
+  background-color: #DB7C96;
+}
+body #tech .tech-item-4 {
+  background-color: #9872A2;
+}
+body #contact .title span {
+  font-size: 30px;
+  margin-left: 5px;
+}
+body #contact .contact-box {
+  background-color: #F5D6CC;
+  padding: 40px 30px 40px 30px;
+  border-radius: 15px;
+  position: relative;
+  text-align: right;
+}
+@media (min-width: 960px) {
+  body #contact .contact-box {
+    width: 500px;
+    text-align: center;
+  }
+}
+body #contact .contact-box p {
+  margin-bottom: 0;
+}
+body #contact .contact-box a {
+  font-size: 28px;
+  color: #333 !important;
+  font-family: "Stylish", sans-serif !important;
+}
+body #contact .contact-box img.icon-mail {
+  position: absolute;
+  width: 110px;
+  left: 30px;
+  top: 15px;
+}
+@media (min-width: 960px) {
+  body #contact .contact-box img.icon-mail {
+    width: 180px;
+    left: -90px;
+    top: 30px;
+  }
+}
+body footer {
+  background-color: #403955;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+body footer div:first-child {
+  margin-bottom: 20px;
+}
+@media (min-width: 960px) {
+  body footer div:first-child {
+    margin-bottom: 0;
+  }
+}
+body footer span {
+  color: #ebebeb;
+}
+body footer a, body footer a:hover {
+  color: #e8c01b;
 }

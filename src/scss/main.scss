@@ -4,12 +4,18 @@
 
 
 body {
+	cursor: url('../assets/watermelon.svg') 12 12, auto;
 
-	nav {
+	.uk-navbar-container:not(.uk-navbar-transparent) {
+		background: #F5D6CC;
+	}
 
+	.uk-navbar {
+		margin: 0 20px;
+	
 		.logo {
 			width: 70px;
-			margin: 20px 0;
+			margin: 15px 0;
 		}
 
 		.uk-navbar-nav {
@@ -109,26 +115,57 @@ body {
 
 	#services {
 		padding: 50px;
-		background-color: #F5D6CC;
+		background-color: #fdf5f2;
 		width: 100%;
 		border-radius: 15px;
 
 		.service-item {
-			text-align: center;
-			width: 150px;
+			margin-bottom: 20px;
+			
+			@media (min-width: $medium) {
+				text-align: center;
+				width: 150px;
+			}
+
+			img {
+				width: 100px;
+				text-align: center;
+				margin-right: 20px;
+		
+				@media (min-width: $medium) {
+					width: 100%;
+					margin-right: 0;
+				}
+			}
 		}
 		
-		img {
-			width: 100px;
-			text-align: center;
-	
-			@media (min-width: $medium) {
-				width: 100%;
+		
+		
+
+		ul {
+
+			li {
+				list-style: none;
+				position: relative;
+
+				&::before {
+					content: "";
+					width: 30px;
+					height: 30px;
+					display: block;
+					background-image: url(../assets/icon-sparkle.png);
+					position: absolute;
+					background-size: contain;
+					background-repeat: no-repeat;
+					left: -40px;
+    				top: 2px;
+				}
 			}
 		}
 	}
 
 	#projects {
+		display: none; // hide for now
 
 		.project-item {
 			padding: 10px;
@@ -158,6 +195,119 @@ body {
 			&-6 {
 				background-color: #946389;
 			}
+		}
+	}
+
+	#tech {
+
+		.title {
+			position: relative;
+			display: inline-block;
+			text-align: center;
+
+			&::before {
+				content: "";
+				width: 70px;
+				height: 70px;
+				display: block;
+				background-image: url(../assets/icon-mouse-clicker.png);
+				position: absolute;
+				background-size: contain;
+				z-index: -1;
+				left: -33px;
+				top: -17px;
+			}
+		}
+
+		.tech-item {
+			// padding: 10px;
+			border-radius: 15px;
+			text-align: center;
+			max-width: 280px;
+
+			&-1 {
+				background-color: #6D9BB5;
+			}
+
+			&-2 {
+				background-color: #EBA268;
+			}
+
+			&-3 {
+				background-color: #DB7C96;
+			}
+
+			&-4 {
+				background-color: #9872A2;
+			}
+		}
+	}
+
+	#contact {
+
+		.title span {
+			font-size: 30px;
+			margin-left: 5px;
+		}
+
+		.contact-box {
+			background-color: #F5D6CC;
+			padding: 40px 30px 40px 30px;
+			border-radius: 15px;
+			position: relative;
+			text-align: right;
+
+			@media (min-width: $medium) {
+				width: 500px;
+				text-align: center;
+			}
+
+			p {
+				margin-bottom: 0;
+			}
+
+			a {
+				font-size: 28px;
+				color: #333 !important;
+				font-family: "Stylish",sans-serif !important;
+			}
+
+			
+			img.icon-mail {
+				position: absolute;
+				width: 110px;
+				left: 30px;
+				top: 15px;
+
+				@media (min-width: $medium) {
+					width: 180px;
+					left: -90px;
+					top: 30px;
+				}
+			}
+		}
+	}
+
+	footer {
+		background-color: #403955;
+		border-radius: 15px;
+		padding: 20px;
+		margin-bottom: 40px;
+
+		div:first-child {
+			margin-bottom: 20px;
+
+			@media (min-width: $medium) {
+				margin-bottom: 0;
+			}
+		}
+		
+		span {
+			color: $white;
+		}
+		
+		a, a:hover {
+			color: #e8c01b;
 		}
 	}
 }
