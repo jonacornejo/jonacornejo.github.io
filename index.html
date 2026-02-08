@@ -23,14 +23,14 @@
 	<div uk-sticky="start: 170; animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent uk-light; end: ! *;">
 		<nav class="uk-navbar-container uk-navbar-transparent uk-width-1-1">
 			<div class="uk-container">
-				<div uk-navbar>
-					<div class="uk-navbar-left uk-flex uk-flex-middle">
+				<div uk-navbar class="uk-flex uk-flex-middle">
+					<div class="uk-navbar-left">
 						<a href="/">
 							<img class="logo" src="./assets/blob-avatar.png" alt="jona-avatar">
 						</a>
 					</div>
 					<div class="uk-navbar-right">
-						<a class="uk-hidden@m uk-navbar-toggle" uk-navbar-toggle-icon href="" uk-toggle="target: #offcanvas-mobile-menu"></a>
+						<a class="uk-hidden@m" uk-icon="icon: menu; ratio: 1.2" uk-toggle="target: #offcanvas-mobile-menu"></a>
 						<ul class="uk-visible@m uk-navbar-nav">
 							<li><a href="#about" uk-scroll>About</a></li>
 							<li><a href="#services" uk-scroll>Services</a></li>
@@ -213,10 +213,10 @@
 		</footer>
 	</div>
 	
-	<div id="offcanvas-mobile-menu" uk-offcanvas="mode: push; overlay: true; flip: true">
+	<div id="offcanvas-mobile-menu" uk-offcanvas="mode: push; overlay: true; flip: true; bg-close: false">
+		<a class="uk-offcanvas-close" uk-icon="icon: close; ratio: 1.2"></a>
 		<div class="uk-offcanvas-bar">
-
-			<div class=" uk-flex uk-flex-middle uk-flex-center uk-flex-column uk-height-1-1">
+			<div class="uk-flex uk-flex-middle uk-flex-center uk-flex-column uk-height-1-1">
 				<div><img class="logo uk-margin-medium-bottom" src="./assets/blob-avatar.png" alt="jona-avatar"></div>
 				<div class="uk-margin-bottom"><p><a href="#about" uk-scroll="offset: 30">About</a></p></div>
 				<div class="uk-margin-bottom"><p><a href="#services" uk-scroll="offset: 30">Services</a></p></div>
