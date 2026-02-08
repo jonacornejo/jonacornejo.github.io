@@ -44,13 +44,19 @@ body {
                     font-size: 16px;
                 }
             }
+
+			a.uk-navbar-toggle:focus, 
+			a.uk-navbar-toggle:focus-visible {
+				box-shadow: none;
+				outline: none;
+			}
         }
     }
 
     #offcanvas-mobile-menu {
 
         .uk-offcanvas-bar {
-            background-color: $white;
+            background-color: #fff;
             padding: 20px;
 
             * {

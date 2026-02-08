@@ -394,8 +394,13 @@ body .uk-navbar-container .uk-navbar .uk-navbar-nav li > a {
   color: #333;
   font-size: 16px;
 }
+body .uk-navbar-container .uk-navbar a.uk-navbar-toggle:focus,
+body .uk-navbar-container .uk-navbar a.uk-navbar-toggle:focus-visible {
+  box-shadow: none;
+  outline: none;
+}
 body #offcanvas-mobile-menu .uk-offcanvas-bar {
-  background-color: #ebebeb;
+  background-color: #fff;
   padding: 20px;
 }
 body #offcanvas-mobile-menu .uk-offcanvas-bar * {
