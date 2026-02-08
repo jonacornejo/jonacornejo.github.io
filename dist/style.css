@@ -105,8 +105,15 @@ a.cta {
   border-radius: 15px;
   width: 100%;
   max-width: 800px;
-  height: 200px;
+  height: 160px;
+  padding-top: 10px;
   position: relative;
+}
+@media (min-width: 960px) {
+  #intro {
+    height: 200px;
+    padding-top: 0;
+  }
 }
 #intro .icon {
   position: absolute;
@@ -210,11 +217,13 @@ a.cta {
   width: 100px;
   text-align: center;
   margin-right: 20px;
+  margin-left: 20px;
 }
 @media (min-width: 960px) {
   #services .service-item img {
     width: 100%;
     margin-right: 0;
+    margin-left: 0;
   }
 }
 #services h3 {
@@ -467,6 +476,8 @@ body #modal-avatar .uk-modal-close-default {
   background: #ebebeb;
   padding: 10px;
   border-radius: 15px;
+  top: -10px;
+  right: 0;
 }
 body #modal-avatar .uk-modal-dialog {
   background: transparent;

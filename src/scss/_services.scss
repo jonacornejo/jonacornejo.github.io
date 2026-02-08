@@ -24,10 +24,12 @@
             width: 100px;
             text-align: center;
             margin-right: 20px;
+            margin-left: 20px;
 
             @media (min-width: $medium) {
                 width: 100%;
                 margin-right: 0;
+                margin-left: 0;
             }
         }
     }
