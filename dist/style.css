@@ -106,24 +106,22 @@ a.cta {
 }
 #intro .icon {
   position: absolute;
-  width: 60px;
+  width: 80px;
   height: auto;
 }
 #intro .icon.icon-1 {
-  bottom: -20px;
-  left: 10px;
+  top: -48px;
+  right: 15px;
 }
 #intro .icon.icon-2 {
-  bottom: -25px;
-  left: 85px;
+  top: -28px;
+  right: 110px;
 }
 #intro .icon.icon-3 {
-  top: -28px;
-  right: 10px;
+  display: none;
 }
 #intro .icon.icon-4 {
-  top: -17px;
-  right: 80px;
+  display: none;
 }
 @media (min-width: 960px) {
   #intro .icon {
@@ -136,15 +134,18 @@ a.cta {
   #intro .icon.icon-2 {
     bottom: -45px;
     left: 15px;
+    top: auto;
   }
   #intro .icon.icon-3 {
     top: -35px;
     right: -55px;
+    display: inline-block;
   }
   #intro .icon.icon-4 {
     right: 10px;
     bottom: -40px;
     top: auto;
+    display: inline-block;
   }
 }
 
@@ -183,6 +184,9 @@ a.cta {
 @media (min-width: 960px) {
   #services {
     padding: 50px;
+  }
+  #services #list {
+    gap: 20px;
   }
 }
 #services .service-item {
@@ -368,11 +372,8 @@ body {
 body .uk-navbar-container:not(.uk-navbar-transparent) {
   background: #F5D6CC;
 }
-body .uk-navbar-container .uk-navbar {
-  margin: 0 20px;
-}
 body .uk-navbar-container .uk-navbar .logo {
-  height: 50px;
+  height: 70px;
   width: auto;
   margin: 15px 0;
 }
@@ -400,7 +401,7 @@ body .uk-navbar-container .uk-navbar a.uk-navbar-toggle:focus-visible {
   outline: none;
 }
 body #offcanvas-mobile-menu .uk-offcanvas-close {
-  top: 23px;
+  top: 30px;
   right: 20px;
 }
 body #offcanvas-mobile-menu .uk-offcanvas-bar {
@@ -411,7 +412,7 @@ body #offcanvas-mobile-menu .uk-offcanvas-bar * {
   color: #333;
 }
 body #offcanvas-mobile-menu .uk-offcanvas-bar img.logo {
-  height: 70px;
+  height: 75px;
   width: auto;
 }
 body footer {

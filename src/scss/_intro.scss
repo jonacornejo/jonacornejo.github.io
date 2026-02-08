@@ -8,27 +8,25 @@
 
     .icon {
         position: absolute;
-        width: 60px;
+        width: 80px;
         height: auto;
 
         &.icon-1 {
-            bottom: -20px;
-            left: 10px;
+            top: -48px;
+            right: 15px;
         }
 
         &.icon-2 {
-            bottom: -25px;
-            left: 85px;
+            top: -28px;
+            right: 110px;
         }
 
         &.icon-3 {
-            top: -28px;
-            right: 10px;
+            display: none;
         }
         
         &.icon-4 {
-            top: -17px;
-            right: 80px;
+            display: none;
         }
 
         @media (min-width: $medium) {
@@ -42,17 +40,20 @@
             &.icon-2 {
                 bottom: -45px;
                 left: 15px;
+                top: auto;
             }
 
             &.icon-3 {
                 top: -35px;
                 right: -55px;
+                display: inline-block;
             }
 
             &.icon-4 {
                 right: 10px;
                 bottom: -40px;
                 top: auto;
+                display: inline-block;
             }
         }
     }
