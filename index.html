@@ -24,19 +24,21 @@
 		<nav class="uk-navbar-container uk-navbar-transparent uk-width-1-1">
 			<div class="uk-container">
 				<div uk-navbar>
-					<div class="uk-navbar-left">
+					<div class="uk-navbar-left uk-flex uk-flex-middle">
 						<a href="/">
 							<img class="logo" src="./assets/blob-avatar.png" alt="jona-avatar">
 						</a>
 					</div>
 					<div class="uk-navbar-right">
-						<ul class="uk-navbar-nav">
+						<a class="uk-hidden@m uk-navbar-toggle" uk-navbar-toggle-icon href="" uk-toggle="target: #offcanvas-mobile-menu"></a>
+						<ul class="uk-visible@m uk-navbar-nav">
 							<li><a href="#about" uk-scroll>About</a></li>
 							<li><a href="#services" uk-scroll>Services</a></li>
 							<li><a href="#tech" uk-scroll>Tech</a></li>
 							<li><a href="#contact" uk-scroll>Get in touch</a></li>
 						</ul>
 					</div>
+
 				</div>
 			</div>
 		</nav>
@@ -57,31 +59,31 @@
 
 		<div id="about" class="uk-margin-xlarge-bottom uk-width-2xlarge uk-margin-auto">
 			<div class="uk-text-center uk-margin-left uk-margin-right">
-				<h2 class="uk-margin-medium-bottom title">About</h2>
+				<h2 class="uk-margin-medium-bottom@m uk-margin-bottom title">About</h2>
 				<p>I'm a web developer specializing in front-end and WordPress.</p>
 				<p>Working at digital agencies and juggling freelance gigs for over a decade has equipped me to build all sorts of web-based applications.</p>
 			</div>
 		</div>
 
 		<div id="services" class="uk-margin-xlarge-bottom uk-width-2xlarge uk-margin-auto">
-			<h2 class="uk-text-center uk-margin-medium-bottom">Services</h2>
+			<h2 class="uk-text-center uk-margin-medium-bottom@m uk-margin-bottom">Services</h2>
 
 			<div class="uk-flex uk-flex-between uk-width-2xlarge uk-margin-auto uk-flex-row@m uk-flex-column">
-				<div class="service-item uk-flex uk-flex-row uk-flex-column@m uk-flex-middle">
+				<div class="service-item uk-flex uk-flex-row uk-flex-column@m uk-flex-middle uk-flex-center">
 					<img src="./assets/icon-cart.png" alt="icon-cart">
-					<p class="uk-text-center uk-margin-top">Create a brand new custom website?</p>
+					<p class="uk-text-center@m uk-margin-top">Create a brand new custom website?</p>
 				</div>
-				<div class="service-item uk-flex uk-flex-row uk-flex-column@m uk-flex-middle">
+				<div class="service-item uk-flex uk-flex-row uk-flex-column@m uk-flex-middle uk-flex-center">
 					<img src="./assets/icon-screw-driver.png" alt="icon-screw-driver">
-					<p class="uk-text-center uk-margin-top">Is something not working properly?</p>
+					<p class="uk-text-center@m uk-margin-top">Is something not working properly?</p>
 				</div>
-				<div class="service-item uk-flex uk-flex-row uk-flex-column@m uk-flex-middle">
+				<div class="service-item uk-flex uk-flex-row uk-flex-column@m uk-flex-middle uk-flex-center">
 					<img src="./assets/icon-paper-plane.png" alt="icon-paper-plane">
-					<p class="uk-text-center uk-margin-top">Just wanna add a cool new feature?</p>
+					<p class="uk-text-center@m uk-margin-top">Just wanna add a cool new feature?</p>
 				</div>
 			</div>
 
-			<h3 class="uk-text-center uk-margin-medium-bottom">Key strengths you can count on:</h3>
+			<h3 class="uk-text-center">Key strengths you can count on:</h3>
 
 			<div class="uk-flex uk-flex-between uk-flex-row@m uk-flex-column uk-width-2xlarge uk-margin-auto">
 				<div>
@@ -200,15 +202,30 @@
 			</div>
 		</div>
 
-		<footer class="uk-flex uk-flex-row@m uk-flex-column uk-flex-between uk-margin-medium-bottom">
+		<footer class="uk-flex uk-flex-row@m uk-flex-column uk-flex-between">
 			<div>
-				<span>Designed & developed by <a href="https://www.linkedin.com/in/jona-cornejo/" target="_blank">Jona Cornejo</a></span>
+				<span>Designed & developed by <a href="https://www.linkedin.com/in/jona-cornejo/" target="_blank">me</a></span>
 			</div>
 			<div>
-				<span>Graphic design stickers created by <a href="https://www.flaticon.com/free-stickers/graphic-design" title="graphic design stickers" target="_blank">Stickers - Flaticon</a></span>
+				<span class="uk-visible@m">All stickers from <a href="https://www.flaticon.com/authors/stickers/flat?author_id=1167&type=sticker" title="flat icon stickers" target="_blank">Flaticon</a> | Custom avatar by drowl0</span>
+				<span class="uk-hidden@m">All stickers from <a href="https://www.flaticon.com/authors/stickers/flat?author_id=1167&type=sticker" title="flat icon stickers" target="_blank">Flaticon</a> <br> Custom avatar by drowl0</span>
 			</div>
 		</footer>
 	</div>
 	
+	<div id="offcanvas-mobile-menu" uk-offcanvas="mode: push; overlay: true; flip: true">
+		<div class="uk-offcanvas-bar">
+
+			<div class=" uk-flex uk-flex-middle uk-flex-center uk-flex-column uk-height-1-1">
+				<div><img class="logo uk-margin-medium-bottom" src="./assets/blob-avatar.png" alt="jona-avatar"></div>
+				<div class="uk-margin-bottom"><p><a href="#about" uk-scroll="offset: 30">About</a></p></div>
+				<div class="uk-margin-bottom"><p><a href="#services" uk-scroll="offset: 30">Services</a></p></div>
+				<div class="uk-margin-bottom"><p><a href="#tech" uk-scroll="offset: 30">Tech</a></p></div>
+				<div class="uk-margin-medium-bottom"><p><a href="#contact" uk-scroll="offset: 30">Get in touch</a></p></div>
+				<div><p>🫶</p></div>
+			</div>
+		</div>
+	</div>
+
 </body>
 </html>

@@ -1,0 +1,59 @@
+#intro {
+    background-color: $peach;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 800px;
+    height: 200px;
+    position: relative;
+
+    .icon {
+        position: absolute;
+        width: 60px;
+        height: auto;
+
+        &.icon-1 {
+            bottom: -20px;
+            left: 10px;
+        }
+
+        &.icon-2 {
+            bottom: -25px;
+            left: 85px;
+        }
+
+        &.icon-3 {
+            top: -28px;
+            right: 10px;
+        }
+        
+        &.icon-4 {
+            top: -17px;
+            right: 80px;
+        }
+
+        @media (min-width: $medium) {
+            width: 130px;
+
+            &.icon-1 {
+                top: -20px;
+                left: -55px;
+            }
+
+            &.icon-2 {
+                bottom: -45px;
+                left: 15px;
+            }
+
+            &.icon-3 {
+                top: -35px;
+                right: -55px;
+            }
+
+            &.icon-4 {
+                right: 10px;
+                bottom: -40px;
+                top: auto;
+            }
+        }
+    }
+}

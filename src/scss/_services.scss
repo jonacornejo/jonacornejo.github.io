@@ -1,0 +1,67 @@
+#services {
+    padding: 30px 30px 50px;
+    background-color: #fdf5f2;
+    width: 100%;
+    border-radius: 15px;
+
+    @media (min-width: $medium) {
+        padding: 50px;
+    }
+
+    .service-item {
+        margin-bottom: 20px;
+        
+        @media (min-width: $medium) {
+            text-align: center;
+            width: 150px;
+        }
+
+        img {
+            width: 100px;
+            text-align: center;
+            margin-right: 20px;
+
+            @media (min-width: $medium) {
+                width: 100%;
+                margin-right: 0;
+            }
+        }
+    }
+
+    h3 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        @media (min-width: $medium) {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+    }
+
+    ul {
+
+        li {
+            list-style: none;
+            position: relative;
+
+            &::before {
+                content: "";
+                width: 20px;
+                height: 20px;
+                display: block;
+                background-image: url(../assets/icon-sparkle.png);
+                position: absolute;
+                background-size: contain;
+                background-repeat: no-repeat;
+                left: -30px;
+                top: 2px;
+
+                @media (min-width: $medium) {
+                    width: 30px;
+                    height: 30px;
+                    left: -40px;
+                }
+            }
+        }
+    }
+}

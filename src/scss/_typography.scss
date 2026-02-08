@@ -1,9 +1,41 @@
+@use "sass:math";
+
 @import url('https://fonts.googleapis.com/css2?family=Stylish&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Farro:wght@300;400;500;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+// function for fluid typography
+
+@function strip-unit($value) {
+	@return math.div($value, ($value * 0 + 1));
+}
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+	$u1: math.unit($min-vw);
+	$u2: math.unit($max-vw);
+	$u3: math.unit($min-font-size);
+	$u4: math.unit($max-font-size);
+
+	@if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+		& {
+			font-size: $min-font-size;
+			@media screen and (min-width: $min-vw) {
+				font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+			}
+			@media screen and (min-width: $max-vw) {
+				font-size: $max-font-size;
+			}
+		}
+	}
+}
+
+// minimum & maximum view port size for fluid typography
+$min_width: 375px;
+$max_width: 1440px;
 
 * {
 	font-family: 'Inter', sans-serif !important;
 	color: $text;
+	@include fluid-type($min_width, $max_width, 16px, 20px);
 }
 
 h1, h2, h3 {
@@ -12,26 +44,29 @@ h1, h2, h3 {
 
 h1 {
 	font-family: 'Stylish', sans-serif;
-	font-size: 42px;
+	@include fluid-type($min_width, $max_width, 30px, 42px);
 	margin-top: 0;
 	margin-bottom: 0;
 }
 
 h2 {
-	font-size: 38px;
+	@include fluid-type($min_width, $max_width, 26px, 38px);
+}
+
+h3 {
+	@include fluid-type($min_width, $max_width, 22px, 26px);
 }
 
 p {
-	font-size: 20px;
 	margin-top: 0;
 	margin-bottom: 15px;
 }
 
 a.cta {
-  font-size: 20px;
-  background: $red;
-  color: $white;
-  padding: 14px 30px 16px;
-  border-radius: 30px;
-  text-underline-offset: 4px;
+	font-size: 20px;
+	background: $red;
+	color: $white;
+	padding: 14px 30px 16px;
+	border-radius: 30px;
+	text-underline-offset: 4px;
 }
