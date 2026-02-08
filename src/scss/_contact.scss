@@ -23,9 +23,9 @@
             margin-bottom: 0;
         }
 
-        a {
+        a, span {
             @include fluid-type($min_width, $max_width, 24px, 28px);
-            color: #333 !important;
+            color: #333;
             font-family: "Stylish",sans-serif !important;
         }
 

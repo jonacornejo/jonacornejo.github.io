@@ -8,9 +8,12 @@ $xlarge: 1600px;
 $darkgray : #323030;
 $cream : #f5e6ca;
 $text: #382b22;
-$red: #d3544f;
+$red: #cd554e;
 $white: #ebebeb;
 
 $peach: #F5D6CC;
 
 
+.text-red {
+    color: $red !important;
+}

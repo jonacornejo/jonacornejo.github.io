@@ -99,4 +99,27 @@ body {
             color: #e8c01b;
         }
     }
+
+	.brand {
+		position: absolute;
+		bottom: 0;
+
+		p, span {
+			font-family: monospace, monospace !important;
+			font-weight: 700;			
+		}
+	}
+
+	#modal-avatar {
+
+		.uk-modal-close-default {
+			background:$white;
+			padding: 10px;
+			border-radius: 15px;
+		}
+
+		.uk-modal-dialog {
+			background: transparent;
+		}
+	} 
 }
